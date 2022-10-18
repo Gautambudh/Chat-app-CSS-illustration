@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Rubik;
+}
+body {
+    background-color: rgb(242, 242, 242);
+    overflow-x: hidden; 
+}
+/* *********** Two backgrounds ********** */
+.background-1 {
+    height: 86vh;
+    position: absolute;
+    top: -0.2%;
+    left: -6.2%;
+    z-index: 1;
+    background: linear-gradient(30deg,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+    width: 28.1rem;
+    border-radius: 0 0 50% 50%;
+}
+.background-2 {
+    height: 75vh;
+    position: absolute;
+    bottom: -7.3%;
+    right: -6.5%;
+    z-index: 1;
+    background: hsl(293deg 100% 93%);
+    opacity: 0.4;
+    width: 28.1rem;
+    border-radius: 50% 50% 0 0;
+}
+.container {
+    position: absolute;
+    z-index: 55;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.mobile {
+    width: 17rem;
+    height: 33rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 34px;
+    box-shadow: 7px 7px 10px #a5a4a429;
+}
+
+/* ************ UI containing all the chats among service provider & client ******************* */
+.user-interface {
+    background-color:  hsl(270, 20%, 96%);
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-radius: 30px;
+}
+.mobile-header {
+    padding:0;
+    padding-top: 2.5rem;
+    background: linear-gradient(90deg,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+    border-radius: 30px 30px 10px 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+.white-color-mic-space {
+    padding: 0;
+    height: 1.8rem;
+    width: 7.5rem;
+    background-color: white;
+    position: absolute;
+    left: 24.9%;
+    top: 27.7px;
+    border-radius: 0 0 10px 10px;
+    transform: translate(-50%, -50%);
+    z-index: 22;
+}
+.three-dots{
+    padding: 0 1rem;
+    color: white;
+}
+.profile-pic-and-name > img {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.profile-pic-and-name p {
+    margin-bottom: 0;
+    font-size: 9px;
+}
+.name {
+    flex-direction: column;
+}
+/* ********* Service providers chats ********** */
+.service-provider-text {
+    justify-content:start;
+    flex-direction: column;
+    Font-size:9px;
+    width: 100%;
+    padding: 0 0.5rem;
+}
+.service-provider-text p {
+    background-color: hsl(264deg 100% 90%);
+    color: hsl(276, 55%, 52%);
+    border-radius: 15px 15px 15px 5px;
+    padding: 0.3rem 0.5rem;
+    max-width: 61.2%;
+    margin-bottom: 0;
+}
+/* ********* Client replies *********** */
+.dogs-pic {
+    justify-content: flex-end;
+}
+.client-reply {
+    flex-direction: column;
+    align-items: flex-end;
+    Font-size:9px;
+    width: 100%;
+    padding: 0 0.5rem;
+}
+.client-reply p {
+    background-color: white;
+    max-width: 62.3%;
+    border-radius: 15px 15px 5px 15px;
+    padding: 0.3rem 0.5rem;
+}
+.dogs-pic img {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 10px;
+}
+/* ********** Prices for the services ********** */
+.services-price-options {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    justify-content: space-around;
+    padding: 0 0.5rem;
+}
+ .form-check {
+    background: linear-gradient(-90deg,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+    height: 2.5rem;
+    border-radius: 15px 15px 15px 5px;
+    font-size: 0.8rem;
+    max-width: 81%;
+}
+.form-check-input:checked {
+    background-color: hsl(289, 100%, 72%) !important;
+}
+.form-check-input[type=radio] {
+    margin-left: -0.8rem !important;
+    outline: 1px solid white;
+    background-color: hsl(289, 100%, 72%);
+}
+h2 {
+    padding: 0 1rem;
+    color: white;
+    font-size: 1rem;
+}
+p {
+    margin-bottom: 0;
+}
+.form-check label {
+    padding: 0 0.3rem;
+}
+/* ********* Msg typing box ************ */
+.type-msg {
+    padding: 0.5rem 1rem;
+    background-color: white;
+    border-radius: 30px;
+    width: 94.5%;
+}
+.type-msg > input {
+    outline: none;
+    border: 0px;
+    font-size: 9px;
+}
+.type-msg img {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+}
+.text-sec {
+    flex-direction: column;
+    width: 36%;
+}
+.paragraph {
+    color: hsl(270, 7%, 64%);
+}
+
+/* *********** Media queries for device upto width 430px ************* */
+@media screen and (max-width:430px) {
+    .background-1 {
+        height: 82.4vh;
+        top: -0.2%;
+        left: -57.8%;
+        width: 22.8rem;
+    }
+    .background-2 {
+        display: none;
+    }
+    .mobile {
+        width: 15.7rem;
+        height: 30rem;
+    }
+    .white-color-mic-space {
+        left: 50% !important;
+    }
+    .container {
+        margin: 8rem 0;
+    }
+    .text-sec {
+        margin: 2rem 0;
+        align-items: center;
+        text-align: justify;
+        width: 100% !important;
+    }
+    .service-provider-text, .client-reply {
+        Font-size:7px !important;
+    }
+    .service-provider-text p {
+        width: 56.3%;
+    }
+    .client-reply p {
+        width: 53.2% !important;
+        padding: 0.3rem 0.3rem !important;
+    }
+    .dogs-pic img {
+        height: 2rem;
+        width: 2rem;
+        border-radius: 12px;
+    }
+    .services-price-options { 
+        gap: 0.3rem;
+        padding: 0 0.5rem;
+    }
+     .form-check {
+        height: 2.1rem !important;
+        width: 81%;
+    }
+    .form-check-input[type=radio] {
+        margin-left: -0.8rem !important;
+    }
+    h2 {
+        padding: 0 1rem;
+        font-size: 0.7rem;
+    }
+    .form-check p {
+        font-size: 0.5rem;
+    }
+    .type-msg {
+        height: 2.5rem;
+    }
+    .type-msg > input {
+        font-size: 7px;
+    }
+    .type-msg img {
+        height: 1.3rem !important;
+        width: 1.3rem !important;
+    }
+}
